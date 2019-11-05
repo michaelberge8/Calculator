@@ -1,0 +1,5 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: rgba(0, 0, 0, .8);
+    background-image: linear-gradient(to right, rgba(60,179,113,.66), rgb(13, 152, 186));
+}
