@@ -1,4 +1,4 @@
-# calculator
+# Calculator
 A simple calculator with a user interface to perform basic functions.
 
 How to execute code:
