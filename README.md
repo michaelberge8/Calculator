@@ -24,7 +24,7 @@ How to execute code:
 
   app.on('ready', createWindow) 
 
-3. Download and install Electron. Electron enables you to create desktop applications with pure JavaScript by providing a runtime with rich native (operating system) APIs.
+3. Download and install Electron from the command line using the command: 'npm install electron-prebuilt'. Electron enables you to create desktop applications with pure JavaScript by providing a runtime with rich native (operating system) APIs.
 
 4. Run the following command: '$ electron ./main.js' this should display the HTML, CSS, and JS as an application.
 
