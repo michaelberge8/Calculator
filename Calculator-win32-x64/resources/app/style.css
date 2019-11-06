@@ -1,0 +1,104 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: rgba(0, 0, 0, .8);
+    background-image: linear-gradient(to right, rgba(60,179,113,.66), rgb(13, 152, 186));
+}
+#calculator {
+    width: 350px;
+    height: 520px;
+    border: none;
+    background-color: #E2E2E2;
+    border-radius: 5px;
+    opacity: .9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+.center-container {
+    position: relative;
+    height: 100%;
+}
+.absolute-center {
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    border: solid black;
+}
+#keyboard{
+    margin: -5px 0 0 20px;
+}
+#output {
+    margin: 12px 20px;
+    height: 115px;
+    background-color: #F8F8F8;
+    border-radius: 5px;
+}
+#output-value {
+    font-size: 35px;
+    text-align: right;
+    padding: 60px 20px;
+}
+.operator, .number, .empty {
+    width: 60px;
+    height: 60px;
+    margin: 8px;
+    float: left;
+    border: none;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 24px;
+}
+.operator {
+    background-color: #B0B0B0;
+}
+.number {
+    background-color: #C5C5C5;
+}
+.empty {
+    background-color: #E2E2E2;
+}
+#\= {
+    background-color: rgba(36, 166, 150, .33);
+}
+#name {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+#confetti {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+}
+.button {
+    background-color: rgba(226, 226, 226, .33);
+    width: 110px;
+    height: 30px;
+    font-weight: bold;
+    border: none;
+    font-size: 13px;
+    color: rgba(0, 0, 0, .33);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+.number, .operator, #name, #confetti {
+    cursor: pointer;
+    color: rgba(0, 0, 0, .8);
+}
+.operator:active, .number:active {
+    font-size: 22px;
+}
+.operator:active {
+    background-color: #939393;
+}
+.number:active {
+    background-color: #B5B5B5;
+}
+.operator:focus, .number:focus, .empty:focus, #name:focus, #confetti:focus {
+    outline: 0;
+}
+#name:hover, #confetti:hover {
+    color: rgba(0, 0, 0, .5);
+    background-color: rgba(226, 226, 226, .5);
+}

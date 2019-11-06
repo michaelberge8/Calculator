@@ -61,67 +61,67 @@ for(let i=0; i<operator.length; i++){
                         //left side
                         confetti({
                             particleCount: 10,
-                            angle: 60,
-                            spread: 60,
-                            origin: {x: 0}
-                        });
+    angle: 60,
+    spread: 60,
+    origin: {x: 0}
+});
 //right side
-                        confetti({
-                            particleCount: 7,
-                            angle: 120,
-                            spread: 60,
-                            origin: {x: 1}
-                        });
-                        if (Date.now() < end) {
-                            requestAnimationFrame(frame);
-                        }
-                    }());
-                }
-            } catch (err) {
-                printOutput("error");
-                alert(err);
-                run = false;
-            }
+confetti({
+    particleCount: 7,
+    angle: 120,
+    spread: 60,
+    origin: {x: 1}
+});
+if (Date.now() < end) {
+    requestAnimationFrame(frame);
+}
+}());
+}
+} catch (err) {
+    printOutput("error");
+    alert(err);
+    run = false;
+}
+}
+else if((this.id === "/" || this.id === "*" || this.id === "-" || this.id === "+" || this.id === "." || this.id === "**") && !(output === "0" || output === "") && run) {
+    if(!op) {
+        op = true;
+        equals = false;
+        output += operator[i].id;
+        printOutput(output);
+    }
+}
+else if(this.id === "(" && output !== "" && run) {
+    if(validLength()) {
+        if (output === "0") {
+            equals = false;
+            op = true;
+            output = "(";
+            printOutput(output);
+        } else if (typeof (output.charAt(output.length - 1)) !== "number") {
+            equals = false;
+            op = true;
+            output += "(";
+            printOutput(output);
         }
-        else if((this.id === "/" || this.id === "*" || this.id === "-" || this.id === "+" || this.id === "." || this.id === "**") && !(output === "0" || output === "") && run) {
-            if(!op) {
-                op = true;
-                equals = false;
-                output += operator[i].id;
-                printOutput(output);
-            }
+    }
+}
+else if(this.id === ")" && output !== "" && run) {
+    if(validLength()) {
+        if (output === "0" || output === "") {
+            equals = false;
+            op = false;
+            output = ")";
+            printOutput(output);
+        } else {
+            equals = false;
+            op = false;
+            output += ")";
+            printOutput(output);
         }
-        else if(this.id === "(" && output !== "" && run) {
-            if(validLength()) {
-                if (output === "0") {
-                    equals = false;
-                    op = true;
-                    output = "(";
-                    printOutput(output);
-                } else if (typeof (output.charAt(output.length - 1)) !== "number") {
-                    equals = false;
-                    op = true;
-                    output += "(";
-                    printOutput(output);
-                }
-            }
-        }
-        else if(this.id === ")" && output !== "" && run) {
-            if(validLength()) {
-                if (output === "0" || output === "") {
-                    equals = false;
-                    op = false;
-                    output = ")";
-                    printOutput(output);
-                } else {
-                    equals = false;
-                    op = false;
-                    output += ")";
-                    printOutput(output);
-                }
-            }
-        }
-    });
+    }
+}
+});
 }
 
 let number = document.getElementsByClassName("number");
