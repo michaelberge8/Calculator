@@ -66,6 +66,11 @@ body {
     bottom: 20px;
     right: 20px;
 }
+#confetti {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+}
 .button {
     background-color: rgba(226, 226, 226, .33);
     width: 110px;
